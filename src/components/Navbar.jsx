@@ -4,6 +4,8 @@ import styled, { useTheme } from "styled-components";
 import { Bio } from "../data/constants";
 import { MenuRounded } from "@mui/icons-material";
 
+//The backticks ` ` are template literals, used to write CSS inside JavaScript.
+
 const Nav = styled.div`
   background-color: ${({ theme }) => theme.bg};
   height: 80px;
@@ -16,7 +18,7 @@ const Nav = styled.div`
   z-index: 10;
   color: white;
 `;
-
+//container wlt em design danw
 const NavbarContainer = styled.div`
   width: 100%;
   max-width: 1200px;
@@ -48,6 +50,8 @@ const NavItems = styled.ul`
     display: none;
   }
 `;
+
+//styled.a means you are styling an <a> (anchor) HTML element using styled-components.
 
 const NavLink = styled.a`
   color: ${({ theme }) => theme.text_primary};
@@ -132,7 +136,7 @@ const Navbar = () => {
   return (
     <Nav>
       <NavbarContainer>
-        <NavLogo to="/">GeeksForGeeks</NavLogo>
+        <NavLogo to="/">LAKSHANCODES</NavLogo>
 
         <MobileIcon onClick={() => setIsOpen(!isOpen)}>
           <MenuRounded style={{ color: "inherit" }} />
@@ -175,6 +179,7 @@ const Navbar = () => {
             </GithubButton>
           </MobileMenu>
         )}
+        {/* //target="_Blank" use for open in new tab the github profile */}
 
         <ButtonContainer>
           <GithubButton href={Bio.github} target="_Blank">

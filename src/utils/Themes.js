@@ -1,3 +1,4 @@
+//here we provide the color scheme for our app
 export const darkTheme = {
   bg: "#090917",
   bgLight: "#1C1E27",
