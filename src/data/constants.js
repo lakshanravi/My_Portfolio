@@ -46,10 +46,10 @@ export const skills = [
           "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png",
       },
       {
-        name: "Bootstrap",
-        image:
-          "https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow.png",
-      },
+        name: "Tailwind CSS",
+        image: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg"
+      }
+      ,
       {
         name: "Material UI",
         image:
@@ -73,33 +73,29 @@ export const skills = [
     
       {
         name: "Python",
-        image:
-          "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg",
+        image: "https://www.vectorlogo.zone/logos/python/python-icon.svg",
       },
       {
         name: "Flask",
-        image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Flask_logo.svg/1280px-Flask_logo.svg.png",
+        image: "https://www.vectorlogo.zone/logos/palletsprojects_flask/palletsprojects_flask-icon.svg",
       },
-   
       {
         name: "MySQL",
-        image:
-          "https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg",
+        image: "https://www.vectorlogo.zone/logos/mysql/mysql-icon.svg",
       },
       {
-        name: "Postgresql",
-        image: "https://www.postgresql.org/media/img/about/press/elephant.png",
+        name: "PostgreSQL",
+        image: "https://www.vectorlogo.zone/logos/postgresql/postgresql-icon.svg",
       },
       {
         name: "MongoDB",
-        image:
-          "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg",
+        image: "https://www.vectorlogo.zone/logos/mongodb/mongodb-icon.svg",
       },
       {
-        name: "Firebase",
-        image: "https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg",
-      },
+        name: "Java",
+        image: "https://www.vectorlogo.zone/logos/java/java-icon.svg",
+      }
+      
     ],
   },
   {
@@ -312,152 +308,110 @@ export const experiences = [
 export const education = [
   {
     id: 0,
-    img: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/Kiit.jpeg?alt=media&token=3839d520-c59d-4341-ad8f-0980c98de4dd",
-    school: "Kalinga Institute of Industrial Technology, Bhubaneswar",
-    date: "Oct 2021 - Sep 2025",
-    grade: "8.41 CGPA",
-    desc: "I am currently pursuing a Bachelor's degree in Computer Science and Engineering at Kalinga Institute of Industrial Technology, Bhubaneswar. I have completed 4 semesters and have a CGPA of 8.71. I have taken courses in Data Structures, Algorithms, Object-Oriented Programming, Database Management Systems, Operating Systems, and Computer Networks, among others. I am also a member of the Google Developers Student Club (GDSC) at KIIT, where I am learning and working on exciting projects with a team of talented developers.",
-    degree: "Bachelor of Technology - BTech, Computer Science and Engineering",
+    img: "images/UniLogo.png",
+    school: "Sabaragamuwa University of Sri Lanka",
+    date: "Jun 2022 – present",
+    grade: "Cumulative GPA : 3.72",
+    desc: "I am currently pursuing a BSc (Hons) degree in Software Engineering, where I have gained strong theoretical and practical knowledge in areas such as Data Structures, Algorithms, Object-Oriented Programming, Web Development, and Database Management Systems. As a member of the IEEE student chapter, I actively participate in technical workshops and events. Additionally, I have worked on several community-based projects, which have strengthened my teamwork, collaboration, and real-world problem-solving skills while enhancing my technical expertise and project management abilities.",
+    degree: "Bachelor of Science (Honours) in Software Engineering",
   },
   {
     id: 1,
-    img: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/methodist.png?alt=media&token=018a1b18-e2dd-4f34-8855-cff1b6b69fd3",
-    school: "Methodist School, Dankuni",
-    date: "Apr 2019 - Apr 2025",
-    grade: "88.2%",
-    desc: "I completed my class 12 high school education at Methodist School, Dankuni, where I studied Science with Computer Science.",
-    degree: "ISC(XII), Science with Computer",
+    img: "images/IHRA.png",
+    school: "IHRA University of Colombo",
+    date: "2021 - 2022",
+    grade: "Distinction Pass",
+    desc: "Successfully completed a certificate course covering fundamental and advanced concepts in computer applications and web development. Gained practical experience in tools and technologies essential for building responsive and functional websites.",
+    degree: "Certificate Course in Computer Applications & Web Development",
   },
   {
     id: 2,
-    img: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/methodist.png?alt=media&token=018a1b18-e2dd-4f34-8855-cff1b6b69fd3",
-    school: "Methodist School, Dankuni",
-    date: "Apr 2017 - Apr 2019",
-    grade: "92.3%",
-    desc: "I completed my class 10 education at Methodist School, Dankuni, where I studied Science with Computer Application.",
-    degree: "ICSC(X), Science with Computer",
+    img: "images/BC.jpeg",
+    school: "Bandaranayake College Gampaha",
+    date: "2011 - 2019",
+    grade: "Z-Score: 1.4789",
+    desc: "Successfully completed the G.C.E. Advanced Level examination in the Physical Science stream with strong academic results: Chemistry – A, Physics – B, and Combined Mathematics – B. Achieved a Z-Score of 1.4789. Gained a solid foundation in scientific principles and analytical thinking.",
+    degree: " G.C.E Advanced Level in Physical Science",
   },
 ];
 
 export const projects = [
   {
     id: 11,
-    title: "DecisionHub",
-    date: "Jan 2024 - Dec 2023",
+    title: "MarketSync",
+    date: "Feb 2025 – May 2025",
     description:
-      "A Rule Builder application “Decision Hub” that empowers Business Analysts to create, save, and visualize decision strategies. Provide a no-code rule writing experience and visual representation to test these rules in real-time and observe the calculations at each step.",
+      "A comprehensive web-based platform for managing tenant records, shop details, invoice processing, and financial transactions at the Dambulla Dedicated Economic Center. The system ensures efficient management of economic activities,including vehicle ticketing, sanitary ticketing, and real-time financial tracking.",
     image:
-      "https://github.com/rishavchanda/DecisionHub/raw/master/assets/testRule.jpg",
+    "/images/1.jpg",
+
     tags: [
       "React Js",
-      "PostgressSQL",
       "Node Js",
       "Express Js",
-      "Redux",
-      "React Flow",
+      "MySQL",
+      "Tailwind CSS",
     ],
     category: "web app",
-    github: "https://github.com/rishavchanda/DecisionHub",
-    webapp: "https://decisionhub.netlify.app/",
+    github: "https://github.com/RashenThemiya/community",
+    
   },
   {
     id: 9,
-    title: "Trackify",
-    date: "Jun 2023 - Jul 2023",
+    title: "FarmScape",
+    date: "Oct 2024 - Jan 2025",
     description:
-      "Trackify is a web application designed to streamline task management and enhance productivity in the workplace. It provides a user-friendly interface for employers to keep track of their employees' daily work activities and empowers employees to log their tasks efficiently. \nAdmin Credentials: # Email: testadmin@gmail.com #Password- 123@testadmin, Employee Credentials:	#Email: testemployee@gmail.com	#Password- 123@Testemployee",
+      " A user-friendly web platform designed to assist farmers,veterinarians,and agricultural professionals in tracking and managing livestock health records. The system includes AI-powered animal tracking and security features, ensuring real-time monitoring and geofencing for enhanced farmsecurity",
     image:
       "https://user-images.githubusercontent.com/64485885/255202416-e1f89b04-2788-45b0-abc2-9dec616669e2.png",
     tags: [
-      "Docker",
-      "AWS",
-      "DuckDNS",
-      "Eslint",
-      "Husky",
-      "CI/CD",
-      "React Js",
-      "MongoDb",
-      "Node Js",
-      "Express Js",
-      "Redux",
+     "HTML", "CSS", "JavaScript", "PHP", "Python", "MySQL"
     ],
     category: "web app",
-    github: "https://github.com/rishavchanda/Trackify",
+    github: "https://github.com/lakshanravi/Farmscape_web_app",
     webapp: "https://trackify-management.netlify.app/",
   },
   {
     id: 0,
-    title: "Podstream",
+    title: "EmotionSense",
     date: "Apr 2023 - May 2023",
     description:
-      "Developed a full-stack web application that allows users to search for, play, and pause their favorite podcasts on demand and create podcasts. Implemented user authentication using Google Auth and Jwt Auth, made responsive user interface with React JS that provides users with a seamless experience across all devices. Practiced agile methodologies to optimize team efficiency and communication.",
+      "An AI-powered emotion recognition system designed to be integrated into a health application. It processes real-time facial expressions from video or photo input, classifies emotions such as happy, sad, angry, and surprised, and provides insights for mental health analysis",
     image:
-      "https://user-images.githubusercontent.com/64485885/234602896-a1bd8bcc-b72b-4821-83d6-8ad885bf435e.png",
-    tags: ["React Js", "MongoDb", "Node Js", "Express Js", "Redux"],
-    category: "web app",
-    github: "https://github.com/rishavchanda/Podstream",
+      "images/Emotionscense.png",
+    tags: ["Python", "TensorFlow", "OpenCV", "Keras"],
+    category: "machine learning",
+    github: "https://github.com/lakshanravi/EmotionSense",
     webapp: "https://podstream.netlify.app/",
-    member: [
-      {
-        name: "Rishav Chanda",
-        img: "https://avatars.githubusercontent.com/u/64485885?v=4",
-        linkedin: "https://www.linkedin.com/in/rishav-chanda-b89a791b3/",
-        github: "https://github.com/rishavchanda/",
-      },
-      {
-        name: "Upasana Chaudhuri",
-        img: "https://avatars.githubusercontent.com/u/100614635?v=4",
-        linkedin: "https://www.linkedin.com/in/upasana-chaudhuri-2a2bb5231/",
-        github: "https://github.com/upasana0710",
-      },
-    ],
   },
   {
     id: 1,
-    title: "Vexa",
-    date: "Oct 2022 - Jan 2023",
+    title: "RideX",
+    date: "Aug 2024 - Nov 2024",
     description:
-      "Designed and developed the Vexa project, a project management app that helps users and teams stay organized and on track. Implemented key features such as task tracking, team collaboration, and time tracking to improve productivity and project outcomes and also invite team/project members. The plan is to add a community of users where they can find developers and other team members and chat system implementation.",
+      " A MERN stack-based ride-sharing application that connects travelers with drivers, enabling seamless ride-sharing and efficient booking management.",
     image:
       "https://user-images.githubusercontent.com/64485885/234916413-96296f13-fe4b-4cc4-b215-e72bd7c27928.png",
     tags: [
-      "React Js",
-      "MongoDb",
-      "Node Js",
-      "Express Js",
-      "Redux",
-      "NodeMailer",
+      "React.js", "Node.js", "Express.js", "MongoDB"
     ],
     category: "web app",
-    github: "https://github.com/rishavchanda/Project-Management-App",
+    github: "https://github.com/lakshanravi/RideX",
     webapp: "https://vexa-app.netlify.app/",
   },
   {
     id: 2,
-    title: "Brain Tumor Detection",
+    title: "ShopSphere",
     date: "Jan 2023 - Mar 2023",
     description:
-      "Preprocessed and augmented the dataset to improve model accuracy, trained the model, created API using model and Python, and used React web app for the project's front end. Achievements: Achieved an accuracy of 99.2% to accurately detect brain tumors from medical images.",
+      "A modern,SEO-optimized e-commerce platform built with Next.js and Sanity CMS for seamless product management. Features real-time shopping cart functionality, server- and client-side rendering for fast load times, and secure Stripe checkout.",
     image:
       "https://github.com/rishavchanda/Brain-Tumor-Detection/raw/main/Readme_resource/Image2.png",
     tags: ["Python", "Keras", "TensorFlow", "VGG16", "Pickle", "React"],
-    category: "machine learning",
-    github: "https://github.com/rishavchanda/Brain-Tumor-Detection",
+    category: "web app",
+    github: "https://github.com/lakshanravi/ShopSphere",
     webapp: "https://brain-tumor.netlify.app/",
-    member: [
-      {
-        name: "Rishav Chanda",
-        img: "https://avatars.githubusercontent.com/u/64485885?v=4",
-        linkedin: "https://www.linkedin.com/in/rishav-chanda-b89a791b3/",
-        github: "https://github.com/rishavchanda/",
-      },
-      {
-        name: "Upasana Chaudhuri",
-        img: "https://avatars.githubusercontent.com/u/100614635?v=4",
-        linkedin: "https://www.linkedin.com/in/upasana-chaudhuri-2a2bb5231/",
-        github: "https://github.com/upasana0710",
-      },
-    ],
+
   },
   {
     id: 3,
