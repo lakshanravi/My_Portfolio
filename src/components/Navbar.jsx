@@ -145,7 +145,9 @@ const Navbar = () => {
         <NavItems>
           <NavLink href="#About">About</NavLink>
           <NavLink href="#Skills">Skills</NavLink>
+          <NavLink href="#WorkExperience">Experience</NavLink>
           <NavLink href="#Experience">Achievements</NavLink>
+          <NavLink href="#Certifications">Certifications</NavLink>
           <NavLink href="#Projects">Projects</NavLink>
           <NavLink href="#Education">Education</NavLink>
         </NavItems>
@@ -179,7 +181,6 @@ const Navbar = () => {
             </GithubButton>
           </MobileMenu>
         )}
-        {/* //target="_Blank" use for open in new tab the github profile */}
 
         <ButtonContainer>
           <GithubButton href={Bio.github} target="_Blank">

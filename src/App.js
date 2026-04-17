@@ -4,7 +4,9 @@ import Navbar from "./components/Navbar";
 import { BrowserRouter } from "react-router-dom";
 import Hero from "./components/sections/Hero";
 import Skills from "./components/sections/Skills";
+import WorkExperience from "./components/sections/WorkExperience";
 import Experience from "./components/sections/Experience";
+import Certifications from "./components/sections/Certifications";
 import Education from "./components/sections/Education";
 import StartCanvas from "./components/canvas/Stars";
 import Projects from "./components/sections/Projects";
@@ -45,8 +47,12 @@ function App() {
             <Hero />
             <Wrapper>
               <Skills />
+          
+              <WorkExperience />
+              
               <Experience />
             </Wrapper>
+            <Certifications />
             <Projects />
             <Wrapper>
               <Education />
