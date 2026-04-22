@@ -53,8 +53,6 @@ export const skills = [
   ]},
 ];
 
-// ─── WORK EXPERIENCE ─────────────────────────────────────────────────────────
-// 🔔 Replace placeholder entries below with your actual work experience
 export const workExperiences = [
   {
     
@@ -69,7 +67,7 @@ export const workExperiences = [
   },
 {
   id: 1,
-  role: "Freelance Web Developer",
+  role: "Freelance Software Developer",
   company: "Self-Employed",
   date: "Apr 2024 – Present",
   desc: "Developed and deployed custom Point of Sale (POS) systems for multiple retail shops, handling sales tracking, inventory management, and reporting features. Contributed to the development of the Dambulla Dedicated Economic Center Management System, supporting large-scale operations and data handling. Managed full-stack development including requirement analysis, backend API development, database design, and system deployment.",
@@ -136,7 +134,6 @@ export const certifications = [
   },
 ];
 
-// ─── ACHIEVEMENTS (Hackathons) ────────────────────────────────────────────────
 export const experiences = [
   { id: 0, img: "images/finalist.jpg", role: "Duothan 4.0", company: "Finalist", date: "2024", desc: "Recognized for developing a cutting-edge tech solution that addressed real-world challenges, showcasing innovation and strong team collaboration at a national-level hackathon organized by NSBM Green University." },
   { id: 1, img: "images/thropy.jpg", role: "IEEE Innovation Nation Sri Lanka", company: "Second Runner-Up", date: "2023", desc: "Achieved 3rd place by building a scalable and impactful tech solution, demonstrating problem-solving skills and technical excellence at a competition organized by the IEEE Student Branch of Sabaragamuwa University of Sri Lanka." },

@@ -22,7 +22,8 @@ const Body = styled.div`
 
 const Wrapper = styled.div`
   padding-bottom: 100px;
-  background: linear-gradient(
+  background:
+    linear-gradient(
       38.73deg,
       rgba(204, 0, 187, 0.15) 0%,
       rgba(201, 32, 184, 0) 50%
@@ -47,9 +48,9 @@ function App() {
             <Hero />
             <Wrapper>
               <Skills />
-          
+
               <WorkExperience />
-              
+
               <Experience />
             </Wrapper>
             <Certifications />

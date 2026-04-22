@@ -1,268 +1,367 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { Bio } from "../../data/constants";
 import Typewriter from "typewriter-effect";
-import HeroImg from "../../images/HeroImage.jpg";
-import HeroBgAnimation from "../HeroBgAnimation";
-import { Tilt } from "react-tilt";
+import HeroImg from "../../images/HeroImage-Photoroom.png";
 import { motion } from "framer-motion";
-import {
-  headContainerAnimation,
-  headContentAnimation,
-  headTextAnimation,
-} from "../../utils/motion";
 import StarCanvas from "../canvas/Stars";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
-const HeroContainer = styled.div`
+// ── Minimal, purposeful animations only ─────────────────────────────────────
+
+const fadeUp = keyframes`
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+`;
+
+// ── Layout ───────────────────────────────────────────────────────────────────
+
+const HeroSection = styled.section`
   display: flex;
   justify-content: center;
-  position: relative;
-  padding: 80px 30px;
-  z-index: 1;
-
-  @media (max-width: 960px) {
-    padding: 66px 16px;
-  }
-
-  @media (max-width: 640px) {
-    padding: 32px 16px;
-  }
-
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 95%, 0 100%);
-`;
-const HeroInnerContainer = styled.div`
-  position: relative;
-  display: flex;
-  justify-content: space-between;
   align-items: center;
-  width: 100%;
-  max-width: 1100px;
+  min-height: 100vh;
+  position: relative;
+  padding: 50px 24px 80px;
+  overflow: hidden;
 
-  @media (max-width: 960px) {
-    flex-direction: column;
-  }
-`;
-const HeroLeftContainer = styled.div`
-  width: 100%;
-  order: 1;
-  @media (max-width: 960px) {
-    order: 2;
-    margin-bottom: 30px;
-    display: flex;
-    gap: 6px;
-    flex-direction: column;
-    align-items: center;
-  }
-`;
-const HeroRightContainer = styled.div`
-  width: 100%;
-  order: 2;
-  display: flex;
-  justify-content: end;
-  @media (max-width: 960px) {
-    order: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-contents: center;
-    margin-bottom: 80px;
-  }
-
-  @media (max-width: 640px) {
-    margin-bottom: 30px;
-  }
-`;
-
-const Title = styled.div`
-  font-weight: 700;
-  font-size: 50px;
-  color: ${({ theme }) => theme.text_primary};
-  line-height: 68px;
-
-  @media (max-width: 960px) {
-    text-align: center;
-  }
-
-  @media (max-width: 960px) {
-    font-size: 40px;
-    line-height: 48px;
-    margin-bottom: 8px;
-  }
-`;
-
-const TextLoop = styled.div`
-  font-weight: 600;
-  font-size: 32px;
-  display: flex;
-  gap: 12px;
-  color: ${({ theme }) => theme.text_primary};
-  line-height: 68px;
-
-  @media (max-width: 960px) {
-    text-align: center;
-  }
-
-  @media (max-width: 960px) {
-    font-size: 22px;
-    line-height: 48px;
-    margin-bottom: 16px;
-  }
-`;
-
-const Span = styled.div`
-  cursor: pointer;
-  color: ${({ theme }) => theme.primary};
-`;
-
-const SubTitle = styled.div`
-  font-size: 20px;
-  line-height: 32px;
-  margin-bottom: 42px;
-  color: ${({ theme }) => theme.text_primary + 95};
-
-  @media (max-width: 960px) {
-    text-align: center;
-  }
-
-  @media (max-width: 960px) {
-    font-size: 16px;
-    line-height: 32px;
-  }
-`;
-
-const ResumeButton = styled.a`
-  -webkit-appearance: button;
-  -moz-appearance: button;
-  appearance: button;
-  text-decoration: none;
-
-  width: 95%;
-  max-width: 300px;
-  text-align: center;
-  padding: 16px 0;
-
-  background: hsla(271, 100%, 50%, 1);
-  background: linear-gradient(
-    225deg,
-    hsla(271, 100%, 50%, 1) 0%,
-    hsla(294, 100%, 50%, 1) 100%
-  );
-  background: -moz-linear-gradient(
-    225deg,
-    hsla(271, 100%, 50%, 1) 0%,
-    hsla(294, 100%, 50%, 1) 100%
-  );
-  background: -webkit-linear-gradient(
-    225deg,
-    hsla(271, 100%, 50%, 1) 0%,
-    hsla(294, 100%, 50%, 1) 100%
-  );
-  box-shadow: 20px 20px 60px #1f2634, -20px -20px 60px #1f2634;
-  border-radius: 50px;
-  font-weight: 600;
-  font-size: 20px;
-
-     &:hover {
-        transform: scale(1.05);
-    transition: all 0.4s ease-in-out;
-    box-shadow:  20px 20px 60px #1F2634,
-    filter: brightness(1);
-    }    
-    
-    
-    @media (max-width: 640px) {
-        padding: 12px 0;
-        font-size: 18px;
-    } 
-    color: white;
-`;
-
-const Img = styled.img`
-  border-radius: 50%;
-  width: 100%;
-  height: 100%;
-  max-width: 400px;
-  max-height: 400px;
-  border: 2px solid ${({ theme }) => theme.primary};
-
-  @media (max-width: 640px) {
-    max-width: 280px;
-    max-height: 280px;
+  @media (max-width: 768px) {
+    padding: 100px 20px 60px;
   }
 `;
 
 const HeroBg = styled.div`
   position: absolute;
+  inset: 0;
+  z-index: 0;
+`;
+
+const InnerContainer = styled.div`
+  position: relative;
+  z-index: 1;
   display: flex;
-  justify-content: end;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
   width: 100%;
-  height: 100%;
-  max-width: 1360px;
-  overflow: hidden;
-  padding: 0 30px;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
+  max-width: 1100px;
+
+  @media (max-width: 960px) {
+    flex-direction: column-reverse;
+    gap: 48px;
+    text-align: center;
+  }
+`;
+
+// ── Left side ────────────────────────────────────────────────────────────────
+
+const LeftCol = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: 960px) {
+    align-items: center;
+  }
+`;
+
+const AvailableBadge = styled.div`
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: transparent;
+  border: 1px solid #22c55e55;
+  border-radius: 4px;
+  padding: 5px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #22c55e;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+  width: fit-content;
+  animation: ${fadeUp} 0.5s ease both;
+
+  @media (max-width: 960px) {
+    align-self: center;
+  }
+`;
+
+const GreenDot = styled.span`
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #22c55e;
+  flex-shrink: 0;
+`;
+
+const Greeting = styled.p`
+  font-size: 16px;
+  font-weight: 400;
+  color: ${({ theme }) => theme.text_secondary};
+  margin: 0 0 8px;
+  animation: ${fadeUp} 0.5s 0.1s ease both;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  letter-spacing: 0.2px;
+`;
+
+const Name = styled.h1`
+  font-size: clamp(38px, 5.5vw, 64px);
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 0 0 20px;
+  color: ${({ theme }) => theme.text_primary};
+  animation: ${fadeUp} 0.5s 0.15s ease both;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  letter-spacing: -1px;
+`;
+
+const RoleRow = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: clamp(16px, 2vw, 22px);
+  font-weight: 500;
+  color: ${({ theme }) => theme.text_secondary};
+  margin-bottom: 28px;
+  animation: ${fadeUp} 0.5s 0.2s ease both;
+  opacity: 0;
+  animation-fill-mode: forwards;
 
   @media (max-width: 960px) {
     justify-content: center;
-    padding: 0 0px;
   }
 `;
+
+const TypewriterWrap = styled.span`
+  color: ${({ theme }) => theme.primary};
+  font-weight: 600;
+`;
+
+const Divider = styled.div`
+  width: 40px;
+  height: 2px;
+  border-radius: 1px;
+  background: ${({ theme }) => theme.primary};
+  margin: 0 0 24px;
+  opacity: 0.6;
+  animation: ${fadeUp} 0.5s 0.25s ease both;
+  animation-fill-mode: forwards;
+
+  @media (max-width: 960px) {
+    align-self: center;
+  }
+`;
+
+const Description = styled.p`
+  font-size: 15.5px;
+  line-height: 1.85;
+  color: ${({ theme }) => theme.text_secondary};
+  max-width: 480px;
+  margin: 0 0 36px;
+  animation: ${fadeUp} 0.5s 0.3s ease both;
+  opacity: 0;
+  animation-fill-mode: forwards;
+
+  @media (max-width: 960px) {
+    text-align: center;
+    max-width: 520px;
+  }
+`;
+
+const ButtonRow = styled.div`
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  animation: ${fadeUp} 0.5s 0.35s ease both;
+  opacity: 0;
+  animation-fill-mode: forwards;
+
+  @media (max-width: 960px) {
+    justify-content: center;
+  }
+`;
+
+const ResumeBtn = styled.a`
+  text-decoration: none;
+  padding: 12px 28px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  background: ${({ theme }) => theme.primary};
+  color: #fff;
+  border: none;
+
+  &:hover {
+    opacity: 0.88;
+    transform: translateY(-2px);
+  }
+`;
+
+const OutlineBtn = styled.a`
+  text-decoration: none;
+  padding: 11px 26px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+  background: transparent;
+  color: ${({ theme }) => theme.text_primary};
+  border: 1.5px solid ${({ theme }) => theme.text_secondary}44;
+
+  &:hover {
+    background: ${({ theme }) => theme.card};
+    border-color: ${({ theme }) => theme.text_secondary}88;
+    transform: translateY(-2px);
+  }
+`;
+
+const SocialRow = styled.div`
+  display: flex;
+  gap: 12px;
+  margin-top: 32px;
+  animation: ${fadeUp} 0.5s 0.4s ease both;
+  opacity: 0;
+  animation-fill-mode: forwards;
+
+  @media (max-width: 960px) {
+    justify-content: center;
+  }
+`;
+
+const SocialIcon = styled.a`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  border: 1.5px solid ${({ theme }) => theme.text_secondary}33;
+  color: ${({ theme }) => theme.text_secondary};
+  text-decoration: none;
+  transition: all 0.2s ease;
+  background: transparent;
+
+  &:hover {
+    border-color: ${({ theme }) => theme.primary}88;
+    color: ${({ theme }) => theme.primary};
+    background: ${({ theme }) => theme.card};
+    transform: translateY(-2px);
+  }
+
+  svg {
+    font-size: 19px;
+  }
+`;
+
+// ── Right side / Photo ───────────────────────────────────────────────────────
+
+const RightCol = styled.div`
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: ${fadeUp} 0.6s 0.1s ease both;
+  opacity: 0;
+  animation-fill-mode: forwards;
+`;
+
+const PhotoWrapper = styled.div`
+  position: relative;
+  width: 400px;
+  height: 400px;
+
+  @media (max-width: 640px) {
+    width: 220px;
+    height: 220px;
+  }
+`;
+
+const Photo = styled.img`
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+`;
+
+// ── Component ────────────────────────────────────────────────────────────────
 
 const Hero = () => {
   return (
     <div id="About">
-      <HeroContainer>
+      <HeroSection>
         <HeroBg>
           <StarCanvas />
-          <HeroBgAnimation />
         </HeroBg>
 
-        <motion.div {...headContainerAnimation}>
-          <HeroInnerContainer>
-            <HeroLeftContainer>
-              <motion.div {...headTextAnimation}>
-                <Title>
-                  Hi, I am <br /> {Bio.name}
-                </Title>
-                <TextLoop>
-                  I am a
-                  <Span>
-                    <Typewriter
-                      options={{
-                        strings: Bio.roles,
-                        autoStart: true,
-                        loop: true,
-                      }}
-                    />
-                  </Span>
-                </TextLoop>
-              </motion.div>
+        <InnerContainer>
+          {/* ── LEFT COLUMN ── */}
+          <LeftCol>
+            {/*  <AvailableBadge>
+              <GreenDot />
+              Open to opportunities
+            </AvailableBadge>
+*/}
+            <Greeting>Hey there, I&apos;m</Greeting>
 
-              <motion.div {...headContentAnimation}>
-                <SubTitle>{Bio.description}</SubTitle>
-              </motion.div>
+            <Name>{Bio.name}</Name>
 
-              <ResumeButton href={Bio.resume} target="_blank">
-                Check Resume
-              </ResumeButton>
-            </HeroLeftContainer>
-            <HeroRightContainer>
-              <motion.div {...headContentAnimation}>
-                <Tilt>
-                  <Img src={HeroImg} alt="Ravindu Lakshan" />
-                </Tilt>
-              </motion.div>
-            </HeroRightContainer>
-          </HeroInnerContainer>
-        </motion.div>
-      </HeroContainer>
+            <RoleRow>
+              I build as a&nbsp;
+              <TypewriterWrap>
+                <Typewriter
+                  options={{
+                    strings: Bio.roles,
+                    autoStart: true,
+                    loop: true,
+                    cursor: "|",
+                  }}
+                />
+              </TypewriterWrap>
+            </RoleRow>
+
+            <Divider />
+
+            <Description>{Bio.description}</Description>
+
+            <ButtonRow>
+              <ResumeBtn href={Bio.resume} target="_blank" rel="noopener noreferrer">
+                View Resume ↗
+              </ResumeBtn>
+              <OutlineBtn href="#Contact">
+                Let's Talk
+              </OutlineBtn>
+            </ButtonRow>
+
+            <SocialRow>
+              <SocialIcon href={Bio.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <GitHubIcon />
+              </SocialIcon>
+              <SocialIcon href={Bio.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <LinkedInIcon />
+              </SocialIcon>
+            </SocialRow>
+          </LeftCol>
+
+          {/* ── RIGHT COLUMN ── */}
+          <RightCol>
+            <PhotoWrapper>
+              <Photo src={HeroImg} alt={Bio.name} />
+            </PhotoWrapper>
+          </RightCol>
+        </InnerContainer>
+      </HeroSection>
     </div>
   );
 };
