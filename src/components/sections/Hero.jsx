@@ -4,7 +4,6 @@ import { Bio } from "../../data/constants";
 import Typewriter from "typewriter-effect";
 import HeroImg from "../../images/HeroImage-Photoroom.png";
 import HeroBgAnimation from "../HeroBgAnimation";
-import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 import StarCanvas from "../canvas/Stars";
 import GitHubIcon from "@mui/icons-material/GitHub";
@@ -33,10 +32,7 @@ const fadeSlideUp = keyframes`
   to   { opacity: 1; transform: translateY(0); }
 `;
 
-const borderSpin = keyframes`
-  0%   { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-`;
+
 
 // ── Layout ───────────────────────────────────────────────────────────────────
 
@@ -117,35 +113,6 @@ const LeftCol = styled.div`
   }
 `;
 
-const AvailableBadge = styled(motion.div)`
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: #22c55e14;
-  border: 1px solid #22c55e44;
-  border-radius: 30px;
-  padding: 6px 16px;
-  font-size: 13px;
-  font-weight: 600;
-  color: #22c55e;
-  letter-spacing: 0.4px;
-  margin-bottom: 22px;
-  width: fit-content;
-  animation: ${fadeSlideUp} 0.6s ease both;
-
-  @media (max-width: 960px) {
-    align-self: center;
-  }
-`;
-
-const GreenDot = styled.span`
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #22c55e;
-  box-shadow: 0 0 6px #22c55e;
-  flex-shrink: 0;
-`;
 
 const Greeting = styled(motion.p)`
   font-size: 18px;
@@ -371,28 +338,8 @@ const PhotoWrapper = styled.div`
   }
 `;
 
-/* Spinning gradient ring behind photo */
-const SpinRing = styled.div`
-  position: absolute;
-  inset: -8px;
-  border-radius: 50%;
-  background: conic-gradient(
-    #854ce6,
-    #c471ed,
-    #0070f3,
-    #854ce6
-  );
-  animation: ${borderSpin} 6s linear infinite;
-  z-index: 0;
-`;
 
-const SpinRingMask = styled.div`
-  position: absolute;
-  inset: 4px;
-  border-radius: 50%;
-  background: ${({ theme }) => theme.bg};
-  z-index: 1;
-`;
+
 
 const Photo = styled.img`
   position: relative;
@@ -405,42 +352,6 @@ const Photo = styled.img`
   display: block;
 `;
 
-/* Floating stat chips around the photo */
-const StatChip = styled.div`
-  position: absolute;
-  z-index: 3;
-  background: ${({ theme }) => theme.card};
-  border: 1px solid ${({ theme }) => theme.primary}33;
-  border-radius: 16px;
-  padding: 10px 16px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  box-shadow: 0 8px 24px #00000044;
-  white-space: nowrap;
-  font-size: 13px;
-  font-weight: 700;
-  color: ${({ theme }) => theme.text_primary};
-  animation: ${floatY} 4s ease-in-out infinite;
-  animation-delay: ${({ delay }) => delay || "0s"};
-
-  span.emoji {
-    font-size: 18px;
-  }
-
-  &.top-right {
-    top: -12px;
-    right: -40px;
-  }
-  &.bottom-left {
-    bottom: 10px;
-    left: -50px;
-  }
-
-  @media (max-width: 960px) {
-    display: none;
-  }
-`;
 
 // ── Component ────────────────────────────────────────────────────────────────
 
