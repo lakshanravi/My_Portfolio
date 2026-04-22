@@ -3,7 +3,6 @@ import styled, { keyframes } from "styled-components";
 import { Bio } from "../../data/constants";
 import Typewriter from "typewriter-effect";
 import HeroImg from "../../images/HeroImage-Photoroom.png";
-import { motion } from "framer-motion";
 import StarCanvas from "../canvas/Stars";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
@@ -66,35 +65,8 @@ const LeftCol = styled.div`
   }
 `;
 
-const AvailableBadge = styled.div`
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  background: transparent;
-  border: 1px solid #22c55e55;
-  border-radius: 4px;
-  padding: 5px 12px;
-  font-size: 12px;
-  font-weight: 600;
-  color: #22c55e;
-  letter-spacing: 0.6px;
-  text-transform: uppercase;
-  margin-bottom: 28px;
-  width: fit-content;
-  animation: ${fadeUp} 0.5s ease both;
 
-  @media (max-width: 960px) {
-    align-self: center;
-  }
-`;
 
-const GreenDot = styled.span`
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: #22c55e;
-  flex-shrink: 0;
-`;
 
 const Greeting = styled.p`
   font-size: 16px;
