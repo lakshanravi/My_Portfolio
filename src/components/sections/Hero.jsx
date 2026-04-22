@@ -343,8 +343,8 @@ const RightCol = styled.div`
 
 const PhotoWrapper = styled.div`
   position: relative;
-  width: 340px;
-  height: 340px;
+  width: 380px;
+  height: 380px;
 
   /* Gradient fade mask — bottom edge melts into background */
   &::after {

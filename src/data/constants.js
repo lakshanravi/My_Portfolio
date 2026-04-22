@@ -105,33 +105,7 @@ export const certifications = [
     img: "https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-icon.svg",
     color: "#FF9900",
   },
-  {
-    id: 3,
-    title: "Google Associate Cloud Engineer",
-    issuer: "Google Cloud",
-    date: "2023",
-    credentialUrl: "https://cloud.google.com/certification",
-    img: "https://www.vectorlogo.zone/logos/google_cloud/google_cloud-icon.svg",
-    color: "#4285F4",
-  },
-  {
-    id: 4,
-    title: "Meta Front-End Developer",
-    issuer: "Coursera / Meta",
-    date: "2023",
-    credentialUrl: "https://www.coursera.org/professional-certificates/meta-front-end-developer",
-    img: "https://www.vectorlogo.zone/logos/facebook/facebook-icon.svg",
-    color: "#0866FF",
-  },
-  {
-    id: 5,
-    title: "TensorFlow Developer Certificate",
-    issuer: "Google",
-    date: "2023",
-    credentialUrl: "https://www.tensorflow.org/certificate",
-    img: "https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg",
-    color: "#FF6F00",
-  },
+  
 ];
 
 export const experiences = [
