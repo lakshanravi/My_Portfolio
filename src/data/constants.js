@@ -118,7 +118,7 @@ export const experiences = [
 
 export const education = [
   { id: 0, img: "images/UniLogo.png", school: "Sabaragamuwa University of Sri Lanka", date: "Jun 2022 – present", grade: "Cumulative GPA : 3.72", desc: "I am currently pursuing a BSc (Hons) degree in Software Engineering, where I have gained strong theoretical and practical knowledge in areas such as Data Structures, Algorithms, Object-Oriented Programming, Web Development, and Database Management Systems. As a member of the IEEE student chapter, I actively participate in technical workshops and events.", degree: "Bachelor of Science (Honours) in Software Engineering" },
-  { id: 1, img: "images/IHRA.png", school: "IHRA University of Colombo", date: "2021 - 2022", grade: "Distinction Pass", desc: "Successfully completed a certificate course covering fundamental and advanced concepts in computer applications and web development.", degree: "Certificate Course in Computer Applications & Web Development" },
+  { id: 1, img: "images/channels4_profile.jpg", school: "IHRA University of Colombo", date: "2021 - 2022", grade: "Distinction Pass", desc: "Successfully completed a certificate course covering fundamental and advanced concepts in computer applications and web development.", degree: "Certificate Course in Computer Applications & Web Development" },
   { id: 2, img: "images/BC.jpeg", school: "Bandaranayake College Gampaha", date: "2011 - 2019", grade: "Z-Score: 1.4789", desc: "Successfully completed the G.C.E. Advanced Level examination in the Physical Science stream. Chemistry – A, Physics – B, Combined Mathematics – B.", degree: "G.C.E Advanced Level in Physical Science" },
 ];
 
