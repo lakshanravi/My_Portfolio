@@ -3,7 +3,7 @@ export const Bio = {
   roles: ["Full Stack Developer","AI Developer","Web Developer","Software Engineer"],
   description: "I am a motivated and versatile individual, always eager to take on new challenges. With a passion for learning I am dedicated to delivering high-quality results. With a positive attitude and a growth mindset, I am ready to make a meaningful contribution and achieve great things.",
   github: "https://github.com/lakshanravi",
-  resume: "https://drive.google.com/file/d/1_xmF-Tu9PiiMFrVmg50xq6xiEhqxDzVq/view?usp=sharing",
+  resume: "https://drive.google.com/file/d/1WdToQuo7OnMrX0C-D5ZTAQBJD_TOJhf6/view?usp=sharing",
   linkedin: "https://www.linkedin.com/in/lakshancodes/",
   twitter: "",
   insta: "",
@@ -13,10 +13,11 @@ export const Bio = {
 export const skills = [
   { title: "Frontend", skills: [
     { name: "React Js", image: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K" },
+    { name: "Angular", image: "https://angular.io/assets/images/logos/angular/angular.svg" },
+    { name: "Bootstrap", image: "https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg" },
     { name: "HTML", image: "https://www.w3.org/html/logo/badge/html5-badge-h-solo.png" },
-    { name: "CSS", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1452px-CSS3_logo_and_wordmark.svg.png" },
-    { name: "JavaScript", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png" },
-    { name: "Tailwind CSS", image: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" },
+    { name: "CSS", image: "https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" },
+        { name: "Tailwind CSS", image: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" },
     { name: "Material UI", image: "https://mui.com/static/logo.png" },
   ]},
   { title: "Backend", skills: [
@@ -36,21 +37,34 @@ export const skills = [
     { name: "Jenkins", image: "https://www.vectorlogo.zone/logos/jenkins/jenkins-icon.svg" },
     { name: "Nginx", image: "https://www.vectorlogo.zone/logos/nginx/nginx-icon.svg" },
     { name: "Kubernetes", image: "https://upload.wikimedia.org/wikipedia/commons/0/00/Kubernetes_%28container_engine%29.png" },
+    { name: "GitHub Actions", image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg" }
   ]},
-  { title: "Machine Learning", skills: [
+ {
+  title: "Machine Learning",
+  skills: [
     { name: "Python", image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" },
-    { name: "TensorFlow", image: "https://static-00.iconduck.com/assets.00/tensorflow-icon-1911x2048-1m2s54vn.png" },
-    { name: "Keras", image: "https://miro.medium.com/v2/resize:fit:600/1*DKu_54iqz6C-p6ndo7rO3g.png" },
-    { name: "Jupyter", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Jupyter_logo.svg/1767px-Jupyter_logo.svg.png" },
-    { name: "Google Colab", image: "https://assets.stickpng.com/images/63c2e4c9c4baad4ce22bf9ef.png" },
-  ]},
-  { title: "Others", skills: [
-    { name: "Git", image: "https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" },
-    { name: "GitHub", image: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" },
-    { name: "VS Code", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/512px-Visual_Studio_Code_1.35_icon.svg.png" },
-    { name: "Postman", image: "https://static-00.iconduck.com/assets.00/postman-icon-497x512-beb7sy75.png" },
-    { name: "Figma", image: "https://www.vectorlogo.zone/logos/figma/figma-icon.svg" },
-  ]},
+    { name: "TensorFlow", image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/tensorflow/tensorflow-original.svg" },
+    { name: "Keras", image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/keras/keras-original.svg" },
+
+    { name: "LangChain", image: "https://avatars.githubusercontent.com/u/126733545?s=200&v=4" },
+{ name: "LangGraph", image: "https://avatars.githubusercontent.com/u/126733545?s=200&v=4" },
+{ name: "n8n", image: "https://raw.githubusercontent.com/n8n-io/n8n/master/assets/n8n-logo.png" },
+{ name: "Google Colab", image: "https://colab.research.google.com/img/colab_favicon_256px.png" },
+  ]
+},
+{
+  title: "Others",
+  skills: [
+    { name: "Git", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
+    { name: "GitHub", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
+    { name: "VS Code", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" },
+    { name: "Postman", image: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" },
+    { name: "Figma", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" },
+
+    { name: "Jira", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg" },
+    { name: "Bitbucket", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bitbucket/bitbucket-original.svg" },
+  ]
+}
 ];
 
 export const workExperiences = [
