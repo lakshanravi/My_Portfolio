@@ -4,8 +4,6 @@ import { Bio } from "../../data/constants";
 import Typewriter from "typewriter-effect";
 import HeroImg from "../../images/HeroImage-Photoroom.png";
 import HeroBgAnimation from "../HeroBgAnimation";
-import { motion } from "framer-motion";
-import StarCanvas from "../canvas/Stars";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
@@ -16,10 +14,7 @@ const floatY = keyframes`
   50%       { transform: translateY(-14px); }
 `;
 
-const orbPulse = keyframes`
-  0%, 100% { transform: scale(1);   opacity: 0.55; }
-  50%       { transform: scale(1.1); opacity: 0.75; }
-`;
+
 
 const shimmerText = keyframes`
   0%   { background-position: 0% 50%; }
@@ -58,30 +53,6 @@ const HeroBg = styled.div`
 `;
 
 /* Soft ambient glow blobs in background */
-const GlowBlob = styled.div`
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(90px);
-  pointer-events: none;
-  animation: ${orbPulse} 6s ease-in-out infinite;
-
-  &.blob-left {
-    width: 500px;
-    height: 500px;
-    background: radial-gradient(circle, #854ce640 0%, transparent 70%);
-    top: -80px;
-    left: -120px;
-    animation-delay: 0s;
-  }
-  &.blob-right {
-    width: 420px;
-    height: 420px;
-    background: radial-gradient(circle, #0070f340 0%, transparent 70%);
-    bottom: -60px;
-    right: -80px;
-    animation-delay: 3s;
-  }
-`;
 
 const InnerContainer = styled.div`
   position: relative;
@@ -114,7 +85,7 @@ const LeftCol = styled.div`
 `;
 
 
-const Greeting = styled(motion.p)`
+const Greeting = styled.p`
   font-size: 18px;
   font-weight: 500;
   color: ${({ theme }) => theme.text_secondary};
@@ -124,7 +95,7 @@ const Greeting = styled(motion.p)`
   animation-fill-mode: forwards;
 `;
 
-const Name = styled(motion.h1)`
+const Name = styled.h1`
   font-size: clamp(40px, 6vw, 68px);
   font-weight: 800;
   line-height: 1.1;
@@ -146,7 +117,7 @@ const Name = styled(motion.h1)`
   animation-fill-mode: forwards;
 `;
 
-const RoleRow = styled(motion.div)`
+const RoleRow = styled.div`
   display: flex;
   align-items: center;
   gap: 10px;
@@ -186,7 +157,7 @@ const Divider = styled.div`
   }
 `;
 
-const Description = styled(motion.p)`
+const Description = styled.p`
   font-size: 16px;
   line-height: 1.8;
   color: ${({ theme }) => theme.text_secondary};
@@ -202,7 +173,7 @@ const Description = styled(motion.p)`
   }
 `;
 
-const ButtonRow = styled(motion.div)`
+const ButtonRow = styled.div`
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
@@ -255,7 +226,7 @@ const OutlineBtn = styled.a`
   }
 `;
 
-const SocialRow = styled(motion.div)`
+const SocialRow = styled.div`
   display: flex;
   gap: 14px;
   margin-top: 28px;
@@ -361,11 +332,8 @@ const Hero = () => {
       <HeroSection>
         {/* Background */}
         <HeroBg>
-          <StarCanvas />
           <HeroBgAnimation />
-          <GlowBlob className="blob-left" />
-          <GlowBlob className="blob-right" />
-        </HeroBg>
+                 </HeroBg>
 
         <InnerContainer>
           {/* ── LEFT COLUMN ── */}

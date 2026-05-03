@@ -123,7 +123,18 @@ export const education = [
 ];
 
 export const projects = [
-  { id: 11, title: "MarketSync", date: "Feb 2025 – May 2025", description: "A comprehensive web-based platform for managing tenant records, shop details, invoice processing, and financial transactions at the Dambulla Dedicated Economic Center.", image: "images/marketsync 1.png", tags: ["React Js","Node Js","Express Js","MySQL","Tailwind CSS"], category: "web app", github: "https://github.com/RashenThemiya/community" },
+
+  { id: 11, title: "MarketSync", date: "Feb 2025 – May 2025", description: "For the Dambulla Dedicated Economic Center, a comprehensive web-based platform for managing tenant records, shop details, invoice processing, and financial transactions.", image: "images/marketsync 1.png", tags: ["React Js","Node Js","Express Js","MySQL","Tailwind CSS"], category: "web app", github: "https://github.com/RashenThemiya/community" },
+  {
+  id: 12,
+  title: "RetailPOS",
+  date: "Mar 2026 – Apr 2026",
+  description: "A full-stack web-based Point of Sale (POS) system designed to manage sales, inventory, and retail business operations. Features include real-time sales processing, inventory tracking, customer management, and secure role-based access for admins and cashiers.",
+  image: "images/RetailPOS.png",
+  tags: ["React Js", "Node Js", "Express Js", "MySQL", "Tailwind CSS", "AWS"],
+  category: "web app",
+  github: "https://github.com/lakshanravi/Store_POS"
+},
   { id: 9, title: "FarmScape", date: "Oct 2024 - Jan 2025", description: "A user-friendly web platform designed to assist farmers, veterinarians, and agricultural professionals in tracking and managing livestock health records with AI-powered animal tracking.", image: "images/Farmsaape image.png", tags: ["HTML","CSS","JavaScript","PHP","Python","MySQL"], category: "web app", github: "https://github.com/lakshanravi/Farmscape_web_app" },
   { id: 0, title: "EmotionSense", date: "Apr 2023 - May 2023", description: "An AI-powered emotion recognition system that processes real-time facial expressions, classifies emotions, and provides insights for mental health analysis.", image: "images/Emotionscense.png", tags: ["Python","TensorFlow","OpenCV","Keras"], category: "machine learning", github: "https://github.com/lakshanravi/EmotionSense" },
   { id: 1, title: "RideX", date: "Aug 2024 - Nov 2024", description: "A MERN stack-based ride-sharing application connecting travelers with drivers for seamless ride-sharing and efficient booking management.", image: "images/Ridex .png", tags: ["React.js","Node.js","Express.js","MongoDB"], category: "web app", github: "https://github.com/lakshanravi/RideX" },
